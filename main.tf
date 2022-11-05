@@ -39,14 +39,14 @@ data "aws_secretsmanager_secret_version" "creds" {
 # After importing the secrets storing into Locals
  
 locals {
-  db_creds = jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)
+  db_credentials = jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)
 }
 
 resource "aws_rds_cluster" "main" { 
-  cluster_identifier = "democluster"
-  database_name = "maindb"
-  master_username = local.db_creds.username
-  master_password = local.db_creds.password
+  cluster_identifier = "rampupcluster"
+  database_name = "rampupdb"
+  master_username = local.db_credentials.username
+  master_password = local.db_credentials.password
   port = 5432
   engine = "aurora-postgresql"
   engine_version = "13.7"

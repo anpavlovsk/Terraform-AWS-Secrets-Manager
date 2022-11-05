@@ -428,8 +428,16 @@ Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
 </pre>
 </details>
 
-![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/1.png?raw=true) 
-![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/2.png?raw=true) 
-![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/3.png?raw=true) 
+Secret keys and values are successfully added as we defined in Terraform configuration file.
+
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/secrets.png?raw=true) 
+
+Postgres cluster is created on AWS RDS service
+
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/cluster.png?raw=true) 
+
+AWS secrets created earlier by Terraform are successfully applied in the Postgres database in AWS RDS
+
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/secretsondb.png?raw=true) 
 
  

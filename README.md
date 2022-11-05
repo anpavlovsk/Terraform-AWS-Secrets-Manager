@@ -92,7 +92,9 @@ resource "aws_rds_cluster_instance" "main" {
 ````
 alp@master1:~/Terraform-AWS-Secrets-Manager$ terraform apply
 ````
-
+<details>
+<summary>Output</summary>
+<pre>$ 
 
 ````
 random_password.password: Refreshing state... [id=none]
@@ -103,8 +105,8 @@ Terraform used the selected providers to generate the following execution plan. 
 
 Terraform will perform the following actions:
 
-  # data.aws_secretsmanager_secret.secretmasterDB will be read during apply
-  # (config refers to values not yet known)
+   data.aws_secretsmanager_secret.secretmasterDB will be read during apply
+   (config refers to values not yet known)
  <= data "aws_secretsmanager_secret" "secretmasterDB" {
       + arn                 = (known after apply)
       + description         = (known after apply)
@@ -118,8 +120,8 @@ Terraform will perform the following actions:
       + tags                = (known after apply)
     }
 
-  # data.aws_secretsmanager_secret_version.creds will be read during apply
-  # (config refers to values not yet known)
+   data.aws_secretsmanager_secret_version.creds will be read during apply
+   (config refers to values not yet known)
  <= data "aws_secretsmanager_secret_version" "creds" {
       + arn            = (known after apply)
       + id             = (known after apply)
@@ -130,7 +132,7 @@ Terraform will perform the following actions:
       + version_stages = (known after apply)
     }
 
-  # aws_rds_cluster.main will be created
+   aws_rds_cluster.main will be created
   + resource "aws_rds_cluster" "main" {
       + allocated_storage               = (known after apply)
       + apply_immediately               = (known after apply)
@@ -169,7 +171,7 @@ Terraform will perform the following actions:
       + vpc_security_group_ids          = (known after apply)
     }
 
-  # aws_rds_cluster_instance.main[0] will be created
+   aws_rds_cluster_instance.main[0] will be created
   + resource "aws_rds_cluster_instance" "main" {
       + apply_immediately                     = (known after apply)
       + arn                                   = (known after apply)
@@ -206,7 +208,7 @@ Terraform will perform the following actions:
       + writer                                = (known after apply)
     }
 
-  # aws_rds_cluster_instance.main[1] will be created
+   aws_rds_cluster_instance.main[1] will be created
   + resource "aws_rds_cluster_instance" "main" {
       + apply_immediately                     = (known after apply)
       + arn                                   = (known after apply)
@@ -243,7 +245,7 @@ Terraform will perform the following actions:
       + writer                                = (known after apply)
     }
 
-  # aws_secretsmanager_secret.secretmasterDB will be created
+   aws_secretsmanager_secret.secretmasterDB will be created
   + resource "aws_secretsmanager_secret" "secretmasterDB" {
       + arn                            = (known after apply)
       + force_overwrite_replica_secret = false
@@ -269,7 +271,7 @@ Terraform will perform the following actions:
         }
     }
 
-  # aws_secretsmanager_secret_version.sversion will be created
+   aws_secretsmanager_secret_version.sversion will be created
   + resource "aws_secretsmanager_secret_version" "sversion" {
       + arn            = (known after apply)
       + id             = (known after apply)
@@ -420,4 +422,5 @@ aws_rds_cluster_instance.main[1]: Creation complete after 12m21s [id=myinstance-
 
 Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
 ````
-
+</pre>
+</details>

@@ -1,4 +1,7 @@
 # Terraform-AWS-Secrets-Manager
+
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/0.png?raw=true) 
+
 ## Create Secrets in AWS Secrets Manager using Terraform in Amazon account
 
 main.tf creates the below components: 
@@ -424,3 +427,9 @@ Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
 ````
 </pre>
 </details>
+
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/1.png?raw=true) 
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/2.png?raw=true) 
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/3.png?raw=true) 
+
+ 

@@ -5,9 +5,13 @@
 ## Create Secrets in AWS Secrets Manager using Terraform in Amazon account
 
 main.tf creates the below components: 
+
 Creates random password for user adminaccount in AWS secret(Masteraccoundb) 
+
 Creates a secret named Masteraccoundb 
-Creates a secret version that will contain AWS secret(Masteraccoundb) 
+
+Creates a secret version that will contain AWS secret(Masteraccoundb)  
+
 ````
 # Firstly create a random generated password to use in secrets.
  
@@ -50,7 +54,7 @@ data "aws_secretsmanager_secret_version" "creds" {
 # After importing the secrets storing into Locals
  
 locals {
-  db_creds = jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)
+  db_credentials = jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)
 }
 ````
 
@@ -429,8 +433,16 @@ Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
 </pre>
 </details>
 
-![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/1.png?raw=true) 
-![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/2.png?raw=true) 
-![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/3.png?raw=true) 
+Secret keys and values are successfully added as we defined in Terraform configuration file.
+
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/secrets.png?raw=true) 
+
+Postgres cluster is created on AWS RDS service
+
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/cluster.png?raw=true) 
+
+AWS secrets created earlier by Terraform are successfully applied in the Postgres database in AWS RDS
+
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/secretsondb.png?raw=true) 
 
  

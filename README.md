@@ -1,6 +1,6 @@
 # Terraform-AWS-Secrets-Manager
 
-![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/0.png?raw=true) 
+![alt text](https://github.com/anpavlovsk/Terraform-AWS-Secrets-Manager/blob/main/screenshots/aws-secrets.png.png?raw=true) 
 
 ## Create Secrets in AWS Secrets Manager using Terraform in Amazon account
 

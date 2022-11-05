@@ -89,6 +89,9 @@ resource "aws_rds_cluster_instance" "main" {
   publicly_accessible = true
 }
 ````
+<details>
+<summary>Output</summary>
+<pre>$ 
 ````
 alp@master1:~/Terraform-AWS-Secrets-Manager$ terraform apply
 random_password.password: Refreshing state... [id=none]
@@ -417,3 +420,5 @@ aws_rds_cluster_instance.main[1]: Creation complete after 12m21s [id=myinstance-
 Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
 alp@master1:~/Terraform-AWS-Secrets-Manager$
 ````
+</pre>
+</details>

@@ -424,6 +424,7 @@ aws_rds_cluster_instance.main[1]: Still creating... [12m20s elapsed]
 aws_rds_cluster_instance.main[1]: Creation complete after 12m21s [id=myinstance-2]
 
 Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
+
 ````
 </pre>
 </details>

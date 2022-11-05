@@ -89,11 +89,14 @@ resource "aws_rds_cluster_instance" "main" {
   publicly_accessible = true
 }
 ````
+````
+alp@master1:~/Terraform-AWS-Secrets-Manager$ terraform apply
+````
+
 <details>
 <summary>Output</summary>
 <pre>$ 
 
-alp@master1:~/Terraform-AWS-Secrets-Manager$ terraform apply
 random_password.password: Refreshing state... [id=none]
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
@@ -418,7 +421,5 @@ aws_rds_cluster_instance.main[1]: Still creating... [12m20s elapsed]
 aws_rds_cluster_instance.main[1]: Creation complete after 12m21s [id=myinstance-2]
 
 Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
-alp@master1:~/Terraform-AWS-Secrets-Manager$
-
 </pre>
 </details>

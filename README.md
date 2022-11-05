@@ -5,9 +5,13 @@
 ## Create Secrets in AWS Secrets Manager using Terraform in Amazon account
 
 main.tf creates the below components: 
+
 Creates random password for user adminaccount in AWS secret(Masteraccoundb) 
+
 Creates a secret named Masteraccoundb 
+
 Creates a secret version that will contain AWS secret(Masteraccoundb)  
+
 ````
 # Firstly create a random generated password to use in secrets.
  
